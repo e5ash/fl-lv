@@ -2,4 +2,26 @@ include ../../pug/vars
 
 header.header
 	.case
-		
+		.header__wrap.row
+			.header__logo.logo
+				
+				.logo__icon
+					img(src="uploads/logo-icon.svg" alt="")
+				.logo__text LiveFactor
+					
+			.header__ham
+				span
+				span
+				span
+			ul.header__nav#nav
+				li.active(data-menuanchor="main")
+					a(href="#main") Main
+				li(data-menuanchor="mission")
+					a(href="#mission") Mission
+				li(data-menuanchor="tech")
+					a(href="#tech") Technologies
+				li(data-menuanchor="products")
+					a(href="#products") Products
+				li(data-menuanchor="connect")
+					a(href="#connect") Let's connect
+

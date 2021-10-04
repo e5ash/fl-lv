@@ -8,16 +8,20 @@ html(lang="ru")
 		title=title
 	body
 		.wrap
+			link(rel="stylesheet" href="template/libs/fullpage.js/dist/fullpage.min.css")
 			link(rel="stylesheet" href="template/css/style.css" + version)
 
 			+style('header', 'blocks')
 			include ../../blocks/header/header
 			+script('header', 'blocks')
 			
-			main.main
+			main.main#full_page
 				block content
 
 			+style('footer', 'blocks')
 			include ../../blocks/footer/footer
 
+			script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+			script(src="template/libs/fullpage.js/dist/fullpage.extensions.min.js" + version)
+			script(src="template/libs/fullpage.js/dist/fullpage.js" + version)
 			script(src="template/js/common.js" + version)

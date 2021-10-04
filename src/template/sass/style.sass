@@ -3,11 +3,6 @@
 @import reset
 @import grid
 
-@import ../components/button/button
-@import ../components/field/field
-@import ../components/check/check
-@import ../components/select/select
-@import ../components/popup/popup
 // @import ../components/tabs/tabs
 // @import ../components/popup/popup
 // @import ../components/slider/slider
@@ -17,3 +12,1029 @@
 
 .overflow-disable
 	overflow: hidden
+
+.h2
+	font-size: 50px
+	line-height: 58px
+	font-weight: 500
+	letter-spacing: 0.03em
+
+.h3
+	font-size: 20px
+	line-height: 30px
+	letter-spacing: 0.03em
+	color: #0CA9CB
+
+.t1
+	font-size: 16px
+	line-height: 24px
+	font-weight: 300
+	letter-spacing: 0.03em
+
+
+.btn
+	display: flex
+	align-items: center
+	justify-content: center
+	font-size: $fzMain
+	font-family: $ffMain
+	overflow: hidden
+	cursor: pointer
+	transition: $t
+	&.--md
+		font-weight: 500
+		min-height: 50px
+		border-radius: 5px
+		padding-left: 42px
+		padding-right: 42px
+	&.--gradient
+		color: $black
+		position: relative
+		&:before, &:after
+			z-index: -1
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			transition: .3s
+		&:before
+			background: linear-gradient(88.71deg, #0CA9CB 0.44%, #00D3C5 48.3%, #0AFE6D 99.25%)
+		&:after
+			opacity: 0
+			background: linear-gradient(88.71deg, #1C5FAE 0.44%, #00A1D3 48.3%, #0AFEE1 99.25%)
+		&:hover
+			color: #fff
+			&:before
+				// opacity: 0
+			&:after
+				opacity: 1
+.fp-left#fp-nav
+	ul
+		flex-direction: column
+		li
+			display: flex
+			align-items: center
+			width: 100%
+			a
+				position: relative
+				order: 2
+				width: 15px
+				height: 15px
+				margin-left: auto
+				border: 3px solid #3C4144
+				border-radius: 50%
+				&.active
+					span
+						opacity: 1
+				span
+					opacity: 0
+					width: 5px !important
+					height: 5px !important
+					top: 50% !important
+					left: 50% !important
+					margin: 0 !important
+					transition: .3s
+					transform: translate(-50%, -50%)
+					background: linear-gradient(88.71deg, #0CA9CB 0.44%, #00D3C5 48.3%, #0AFE6D 99.25%)
+			.fp-tooltip
+				order: 1
+				font-size: 16px
+				font-weight: 300
+				font-family: $ffMain
+				width: 95px !important
+				text-align: right !important
+				position: static !important
+
+
+.header
+	z-index: 10
+	top: 0
+	left: 0
+	right: 0
+	position: fixed
+	padding-top: 20px
+	padding-bottom: 20px
+	&__wrap
+		align-items: center
+	&__ham
+		display: none
+	&__nav
+		margin-left: auto
+		li
+			margin-right: 45px
+			&:last-of-type
+				margin-right: 0
+			&.active
+				a
+					&:before
+						opacity: 1
+		a
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 40px
+			padding-left: 30px
+			padding-right: 30px
+			font-weight: 500
+			border-radius: 5px
+			&:before, &:after
+				content: ''
+				display: block
+				position: absolute
+				border-radius: 5px
+				transition: .3s
+			&:before
+				z-index: -2
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				opacity: 0
+				background: linear-gradient(88.71deg, #0CA9CB 0.44%, rgba(0, 211, 197, 0.5) 48.3%, rgba(10, 254, 109, 0) 99.25%)
+			&:after
+				z-index: -1
+				content: ''
+				display: block
+				position: absolute
+				top: 1px
+				left: 1px
+				right: 1px
+				bottom: 1px
+				background-color: #131419
+				
+
+
+.logo
+	display: flex
+	align-items: center
+	&__icon
+		margin-right: 10px
+	&__text
+		font-size: 30px
+		line-height: 35px
+		font-weight: 900
+		background: linear-gradient(88.71deg, #0CA9CB 0.44%, #00D3C5 48.3%, #0AFE6D 99.25%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		
+
+.shapes
+	img
+		position: absolute
+		&:nth-of-type(1)
+			top: 0
+			left: -345px
+		&:nth-of-type(2)
+			bottom: 0
+			right: -355px
+
+
+.i-phone
+	z-index: 1
+	position: absolute
+	&:before
+		z-index: -1
+		position: absolute
+		content: ''
+		width: 326px
+		height: 326px
+		bottom: -107px
+		right: -217px
+		background: radial-gradient(50% 50% at 50% 50%, rgba(10, 253, 113, 0.2) 0%, rgba(10, 253, 113, 0) 100%)
+	&__shape
+		z-index: -1
+		top: 20px
+		left: 40px
+		width: 156px
+		height: 284px
+		position: absolute
+		border-radius: 20px
+		background: linear-gradient(88.71deg, #0CA9CB 0.44%, #00D3C5 48.3%, #0AFE6D 99.25%)
+		&:after
+			content: ''
+			position: absolute
+			top: 2px
+			left: 2px
+			right: 2px
+			bottom: 2px
+			background-color: $black
+			border-radius: 20px
+
+
+.i-desktop
+	z-index: 2
+	position: absolute
+	
+	&__shape
+		z-index: -1
+		top: -30px
+		left: 30px
+		width: 480px
+		height: 270px
+		position: absolute
+		border-radius: 20px
+		background: linear-gradient(88.71deg, #0CA9CB 0.44%, #00D3C5 48.3%, #0AFE6D 99.25%)
+		&:after
+			content: ''
+			position: absolute
+			top: 2px
+			left: 2px
+			right: 2px
+			bottom: 2px
+			background-color: $black
+			border-radius: 20px
+
+
+.section
+	padding-top: 20px
+
+.intro
+	&__content
+		width: 100%
+		max-width: 515px
+	&__title
+		margin-bottom: 22px
+	&__subtitle
+		max-width: 485px
+		margin-bottom: 25px
+	&__text
+		margin-bottom: 34px
+	&__btn
+		display: inline-flex
+	&__imgs
+		position: relative
+		// display: none
+		width: calc(100% - 515px)
+	&__phone
+		left: 20px
+		top: 54px
+	&__desktop
+		top: -12px
+		left: 185px
+	&__play
+		z-index: 3
+		position: absolute
+		top: 182px
+		left: 348px
+	&__shapes
+		img
+			&:nth-of-type(1)
+				top: -40px
+			&:nth-of-type(2)
+				bottom: -7px
+
+
+
+.mission
+	&__img
+		margin-left: -135px
+		margin-bottom: -94px
+	&__content
+		width: 100%
+		max-width: 540px
+		margin-left: 22px
+		padding-top: 32px
+	&__title
+		margin-bottom: 32px
+	&__subtitle
+		margin-bottom: 24px
+	&__text
+		margin-bottom: 34px
+	&__btn
+		display: inline-flex
+	&__shapes
+		img
+			z-index: -1
+			&:nth-of-type(1)
+				top: 22px
+				margin-left: -72px
+			&:nth-of-type(2)
+				// bottom: -7px
+
+
+.tech
+	&__desc
+		color: #0CA9CB
+		text-align: center
+		margin-bottom: 17px
+	&__title
+		text-align: center
+	&__list
+		margin-left: -10px
+		margin-right: -10px
+	&__item
+		width: calc(100% / 3 - 20px)
+		margin-top: -30px
+		margin-left: 10px
+		margin-right: 10px
+		text-align: center
+		&-icon
+			height: 58px
+			display: flex
+			align-items: flex-end
+			justify-content: center
+			margin-bottom: 16px
+		&:nth-of-type(1)
+			.tech__item-icon
+				padding-left: 80px
+		&:nth-of-type(3)
+			.tech__item-icon
+				padding-right: 80px
+
+	&__text
+		margin-top: 32px
+		p
+			margin-bottom: 17px
+			&:last-of-type
+				margin-bottom: 0
+
+
+
+.products
+	&__title
+		font-size: 100px
+		letter-spacing: 0.03em
+		transform: rotate(-90deg)
+		background: linear-gradient(88.71deg, #0CA9CB 0.44%, #00D3C5 48.3%, #0AFE6D 99.25%)
+		background-clip: text
+		-webkit-background-clip: text
+		-webkit-text-stroke: 2px transparent
+		-webkit-text-fill-color: $black
+		position: absolute
+		top: 300px
+		left: -160px
+	&__site
+		font-size: 50px
+		line-height: 58px
+		font-weight: 500
+		letter-spacing: 0.03em
+		position: absolute
+		top: 75px
+		left: 115px
+		
+
+	&__apps
+		// display: none
+		left: 540px
+		top: 50px
+		position: absolute
+	&__play
+		z-index: 10
+		position: absolute
+		bottom: 50px
+		left: 50%
+		margin-left: -57px
+		transform: translateX(-50%)
+	&__inner
+		z-index: 7
+		// display: none
+		position: absolute
+		top: 40px
+		right: 15px
+		width: 100%
+		max-width: 270px
+	&__item
+		font-size: 16px
+		line-height: 24px
+		font-weight: 300
+		letter-spacing: 0.03em
+		border-radius: 20px
+		border: 1px solid #3C4144
+		background-color: $black
+		padding: 14px 8px 14px 20px
+		margin-bottom: 10px
+		&:last-of-type
+			margin-bottom: 0
+	&__btn
+		margin-top: 35px
+	&__img
+		// position: absolute
+		// top: 50%
+		// left: 50%
+		width: 1026px
+		margin-left: 26px
+		// transform: translate(-50%, -50%)
+	&__shapes
+		img
+			&:nth-of-type(1)
+				top: 32px
+				margin-left: -140px
+			&:nth-of-type(2)
+				bottom: 10px
+
+.apps
+	&__list
+		margin-left: -8px
+		margin-right: -8px
+		margin-bottom: -16px
+	&__item
+		margin-left: 8px
+		margin-right: 8px
+		margin-bottom: 16px
+
+
+.connect
+	&__wrap
+		z-index: 5
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		width: 100%
+		max-width: 580px
+		height: 410px
+		margin-left: auto
+		margin-right: auto
+		border-radius: 20px
+		background: linear-gradient(88.71deg, #0CA9CB 0.44%, #00D3C5 48.3%, #0AFE6D 99.25%)
+		&:after
+			z-index: 1
+			content: ''
+			position: absolute
+			top: 2px
+			left: 2px
+			right: 2px
+			bottom: 2px
+			border-radius: 20px
+			background-color: $black
+	&__rounds
+		&:before, &:after
+			z-index: 1
+			content: ''
+			position: absolute
+			background: radial-gradient(50% 50% at 50% 50%, rgba(10, 253, 113, 0.2) 0%, rgba(10, 253, 113, 0) 100%)
+		&:before
+			width: 326px
+			height: 326px
+			bottom: -90px
+			left: -195px
+		&:after
+			width: 200px
+			height: 200px
+			top: -28px
+			right: -115px
+	&__inner
+		z-index: 2
+		position: relative
+	&__title
+		margin-bottom: 30px
+	&__subtitle
+		max-width: 420px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 30px
+	&__text
+		p
+			font-weight: 300
+			margin-bottom: 8px
+			&:last-of-type
+				margin-bottom: 0
+			a
+				&[href*="mailto"]
+					font-weight: 500
+					color: #f00
+					background: linear-gradient(88.71deg, #0CA9CB 0.44%, #00D3C5 48.3%, #0AFE6D 99.25%)
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+	&__shapes
+		img
+			&:nth-of-type(1)
+				margin-left: -370px
+			&:nth-of-type(2)
+				margin-right: -135px
+
+
+	&__copy
+		position: absolute
+		bottom: 20px
+		padding-bottom: 20px
+		left: 50%
+		font-weight: 300
+		line-height: 24px
+		color: #838C92
+		transform: translateX(-50%)
+		
+
+@media screen and (max-width: 1500px)
+	#fp-nav.fp-left
+		left: 0
+
+@media screen and (max-width: 1470px)
+	#fp-nav.fp-left
+		display: none !important
+
+@media screen and (max-width: 1210px)
+	.case
+		max-width: 960px
+
+	.t1
+		font-size: 15px
+		line-height: 21px
+
+	.header
+		&__nav
+			li
+				margin-right: 20px
+			a
+				padding-left: 20px
+				padding-right: 20px
+
+	.intro
+		&__phone
+			left: 130px
+			top: 25px
+		&__desktop
+			display: none
+		&__play
+			width: 111px
+			top: 270px
+			left: 212px
+		&__shapes
+			img
+				&:nth-of-type(2)
+					right: -245px
+					bottom: -40px
+
+
+	.mission
+		&__img
+			width: 600px
+			margin-left: -112px
+		&__content
+			z-index: 1
+			position: relative
+			max-width: 410px
+		&__shapes
+			img
+				z-index: -1
+				&:nth-of-type(1)
+					top: 12px
+					margin-left: -125px
+				&:nth-of-type(2)
+					right: -140px
+					bottom: -9px
+			
+	.tech__title
+		z-index: 5
+		position: relative
+
+	.products
+		&__title
+			top: 220px
+		&__apps
+			left: 15px
+			top: auto
+			bottom: 0
+		&__play
+			width: 110px
+			margin-left: 70px
+			bottom: 70px
+		&__item
+			font-size: 14px
+			line-height: 20px
+		&__shapes
+			img
+				&:nth-of-type(1)
+					top: 10px
+					margin-left: -110px
+				&:nth-of-type(2)
+					right: -385px
+
+	.connect
+		&__shapes
+			img
+				&:nth-of-type(1)
+					margin-left: -480px
+				&:nth-of-type(2)
+					margin-right: -305px
+
+@media screen and (max-width: 992px)
+	.case
+		max-width: 750px
+
+	.h2
+		font-size: 40px
+		line-height: 40px
+
+	.h3
+		font-size: 18px
+		line-height: 24px
+
+	.logo
+		&__icon
+			width: 36px
+			margin-right: 6px
+		&__text
+			font-size: 24px
+	.header
+		&__nav
+			li
+				margin-right: 10px
+			a
+				font-size: 14px
+				padding-left: 15px
+				padding-right: 15px
+
+	.intro
+		&__phone
+			left: 30px
+		&__play
+			top: 270px
+			left: 115px
+		&__shapes
+			img
+				&:nth-of-type(1)
+					left: -225px
+
+	.mission
+		&__img
+			width: 430px
+			left: -82px
+		&__content
+			max-width: 380px
+			padding-top: 0
+		&__shapes
+			img
+				&:nth-of-type(1)
+					top: 5px
+
+
+	.tech
+		&__item
+			margin-top: -20px
+			&-icon
+				padding-left: 0 !important
+				padding-right: 0 !important
+				&:before
+					content: ''
+					width: 22px
+					height: 22px
+					border-radius: 50%
+					border: 5px solid #3C4144
+				img
+					display: none
+
+
+	.products
+		&__title
+			font-size: 70px
+			left: -105px
+		&__site
+			font-size: 40px
+			top: 56px
+		&__inner
+			max-width: 260px
+		&__item
+			padding: 12px
+			font-size: 13px
+			line-height: 16px
+		&__img
+			width: 100%
+		&__play
+			margin-left: 22px
+		&__btn
+			margin-top: 50px
+		&__img
+			padding-bottom: 30px
+
+	.connect
+		&__wrap
+			max-width: 500px
+			height: 360px
+		&__shapes
+			img
+				&:nth-of-type(1)
+					margin-left: -330px
+
+@media screen and (max-width: 768px)
+	.case
+		max-width: 100%
+
+	.logo
+		&__icon
+			width: 40px2
+			margin-right: 9px
+		&__text
+			font-size: 30px
+
+	.header
+		background-color: $black
+		&__ham
+			z-index: 10
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			width: 40px
+			height: 40px
+			border-radius: 5px
+			margin-left: auto
+			cursor: pointer
+			&.--toggle
+				&:before, &:after
+					opacity: 0
+				span
+					background-color: #fff
+					&:nth-of-type(1)
+						top: 7px
+						transform: rotate(45deg)
+					&:nth-of-type(2)
+						opacity: 0
+					&:nth-of-type(3)
+						top: -7px
+						transform: rotate(-45deg)
+			&:before
+				content: ''
+				position: absolute
+				top: 1px
+				left: 1px
+				right: 1px
+				bottom: 1px
+				border-radius: 5px
+				transition: .3s
+				background-color: $black
+			&:after
+				z-index: -1
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				border-radius: 5px
+				transition: .3s
+				background: linear-gradient(160.07deg, #0CA9CB 18.83%, rgba(0, 211, 197, 0.5) 58.15%, rgba(10, 254, 109, 0) 100%)
+			span
+				z-index: 1
+				position: relative
+				display: block
+				width: 22px
+				height: 1px
+				background: #0CA9CB
+				margin-bottom: 6px
+				transition: .3s
+				&:last-of-type
+					margin-bottom: 0
+		&__nav
+			top: 0
+			right: 10px
+			left: 10px
+			position: absolute
+			border-radius: 5px
+			padding: 18px 10px 1px
+			opacity: 0
+			visibility: hidden
+			transition: .3s 
+			background: linear-gradient(50.78deg, #0CA9CB 55.68%, rgba(0, 211, 197, 0.5) 68.64%, rgba(10, 254, 109, 0) 82.43%)
+			&.--toggle
+				opacity: 1
+				visibility: visible
+			&:after
+				content: ''
+				position: absolute
+				top: 1px
+				left: 1px
+				right: 1px
+				bottom: 1px
+				border-radius: 5px
+				background-color: #292A2F
+			li
+				width: 50%
+				margin-right: 0
+				margin-bottom: 18px
+				a
+					z-index: 5
+					position: relative
+					color: #fff
+					text-align: left
+					align-items: flex-start
+					justify-content: flex-start
+					height: auto
+					&:before, &:after
+						display: none
+
+	.h2
+		font-size: 30px
+		line-height: 35px
+	.h3
+		font-size: 20px
+		line-height: 30px
+	.t1
+		font-size: 16px
+		line-height: 24px
+
+
+	.wrap
+		overflow-x: hidden 
+	.btn
+		&.--md
+			min-height: 46px
+			padding-left: 30px
+			padding-right: 30px
+
+
+	.main
+		padding-top: 80px
+
+	.fp-section.fp-table, .fp-slide.fp-table, .fp-tableCell
+		display: block
+
+	.section
+		padding-top: 30px
+		padding-bottom: 30px
+
+	.section, .fp-tableCell
+		height: auto !important
+
+	.shapes
+		display: none
+		img
+			&:nth-of-type(1)
+				min-width: 1013px
+			&:nth-of-type(2)
+				min-width: 786px
+	.intro
+		&__imgs
+			position: static
+		&__content
+			max-width: 100%
+
+		&__text
+			max-width: 50%
+			padding-right: 10px
+			
+		&__phone
+			left: 50%
+			top: 155px
+
+		&__play
+			left: 50%
+			width: 82px
+			top: 360px
+			margin-left: 85px
+
+		&__shapes
+			display: none
+			img
+				&:nth-of-type(1)
+					display: none
+					left: 50%
+					top: -50px
+					margin-left: -370px
+					transform: translateX(-50%)
+				&:nth-of-type(2)
+					right: 50%
+					transform: translateX(50%)
+					margin-right: -270px
+			
+
+	.i-phone
+		&__wrap
+			width: 133px
+		&__shape
+			width: 133px
+			height: 234px
+			left: 35px
+			top: 16px
+			
+	.mission
+		&__wrap
+			min-height: 330px
+		&__img
+			width: 280px
+			padding-top: 120px
+		&__content
+			position: static
+			width: calc(100% - 70px)
+			max-width: 100%
+			margin-left: -100px
+		&__title
+			margin-bottom: 10px
+		&__subtitle
+			line-height: 23px
+		&__text
+			padding-left: 120px
+
+		&__btn
+			top: 285px
+			left: 28px
+			&.btn
+				position: absolute
+				
+
+	.tech
+		&__list
+			margin-left: 0
+			margin-right: 0
+		&__item
+			width: 100%
+			margin-left: 0
+			margin-right: 0
+			margin-bottom: 10px
+		&__text
+			margin-top: 10px
+			p
+				&:last-of-type
+					text-align: center
+
+
+	.products
+		&__title
+			position: static
+			transform: none
+			font-size: 50px
+			margin-bottom: 16px
+
+		&__site
+			position: static
+			font-size: 30px
+			line-height: 35px
+			width: 100%
+
+		&__imgs
+			position: relative
+			
+
+		&__img
+			margin-top: -10%
+			margin-bottom: -7%
+			margin-left: -1%
+
+		&__play
+			width: 58px
+			display: none
+
+		&__apps
+			position: relative
+			top: 0
+			left: 0
+			width: 100%
+
+		&__inner
+			position: static
+			max-width: 100%
+			margin-top: 20px
+		&__list
+			padding: 16px 20px
+			border-radius: 20px
+			border: 1px solid #3C4144
+			text-align: center
+		&__item
+			border: none
+			padding: 0
+			margin-bottom: 8px
+			background-color: transparent
+		&__btn
+			margin-top: 20px
+			max-width: 175px
+			margin-left: auto
+			margin-right: auto
+
+
+	.apps
+		&__list
+			justify-content: center
+			
+
+	.connect
+		padding-top: 45px
+		&__wrap
+			height: auto
+		&__inner
+			padding: 30px 15px
+		&__copy
+			position: static
+			padding-left: 15px
+			padding-right: 15px
+			transform: none
+			text-align: center
+			margin-top: 45px		
+
+
+@media screen and (max-width: 450px)
+	.mission
+		&__subtitle
+			font-size: 18px
+			line-height: 21px
+
+@media screen and (max-width: 375px)
+	.apps
+		&__list
+			margin: 0 -5px -10px
+		&__item
+			width: calc(50% - 10px)
+			margin: 0 5px 10px
+
+@media screen and (max-width: 350px)
+	.mission
+		&__subtitle
+			font-size: 17px
+			line-height: 20px
+		&__text
+			font-size: 13px
+			line-height: 20px
